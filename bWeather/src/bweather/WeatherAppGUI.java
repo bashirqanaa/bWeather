@@ -16,6 +16,7 @@ import javax.swing.*;
 public class WeatherAppGUI extends JFrame {
 
     private JSONObject Data;
+
     
     WeatherAppGUI(){
         super("bWeather");
@@ -69,10 +70,7 @@ public class WeatherAppGUI extends JFrame {
         weatherDisc.setHorizontalAlignment(SwingConstants.CENTER);
         add(weatherDisc);
 
-        //Humidity Image
-        JLabel humidityImage = new JLabel();
-        humidityImage.setBounds(15,500,70 ,70);
-        add(humidityImage);
+
 
         //Humidity text
         JLabel humidityText = new JLabel();
@@ -80,8 +78,13 @@ public class WeatherAppGUI extends JFrame {
         humidityText.setFont(new Font("Dialog",Font.PLAIN,16));
         add(humidityText);
 
-        //WindSpeed Image
-        JLabel WindSpeedImage = new JLabel();
+        //Humidity Image
+        JLabel humidityImage = new JLabel(loadImage("src/assets/humidity.png"));
+        humidityImage.setBounds(15,500,70 ,70);
+        add(humidityImage);
+
+        // Windspeed Image
+        JLabel WindSpeedImage = new JLabel(loadImage("src/assets/windspeed.png"));
         WindSpeedImage.setBounds(250,500,70,70);
         add(WindSpeedImage);
 
